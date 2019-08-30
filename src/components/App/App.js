@@ -21,11 +21,18 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Router>
         <header className="App-header">
           <h1 className="App-title">Feedback!</h1>
           <h4><i>Don't forget it!</i></h4>
         </header>
-        <br/>
+        <Route exact path="/" component={Feeling} />
+        <Route exact path="/understanding" component={Understanding} />
+        <Route exact path="/supported" component={Supported} />
+        <Route exact path="/comments" component={Comments} />
+        <Route exact path="/review" component={ReviewFeedback} />
+        <Route exact path="/success" component={Success} />
+        </Router>
       </div>
     );
   }
