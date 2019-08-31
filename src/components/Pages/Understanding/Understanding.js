@@ -1,15 +1,23 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import mapStoreToProps from '../../../modules/mapStoreToProps';
-
+import Button from '@material-ui/core/Button';
 
 class Understanding extends Component {
+    handleClick = (event) => {
+        this.props.history.push('/supported');
+    }
+
+    render() {
 
     
-    render() {
         return (
             <div>
-                <h1>Feeling!</h1>
+      
+            <Button variant="contained" onClick={this.handleClick} >
+            Default
+            </Button>
+               
             </div>
         )
     }
