@@ -8,6 +8,7 @@ import logger from 'redux-logger';
 import App from './components/App/App';
 import allFeedbackReducer from './modules/reducers/allFeedbackReducer';
 
+
 import './index.css';
 
 const store = createStore(
