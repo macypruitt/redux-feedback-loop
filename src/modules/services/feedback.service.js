@@ -1,9 +1,16 @@
 import axios from 'axios';
 
-cont getFeedback = () => {
+const getFeedback = () => {
     return axios ({
         method: 'GET',
         url: '/feedback'
+    })
+}
+
+const postFeedback = () => {
+    return axios ({
+        method: 'POST',
+        url: 'feedback'
     })
 }
 

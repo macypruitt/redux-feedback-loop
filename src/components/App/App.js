@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import 'typeface-roboto';
 
 
+
 import './App.css';
 
 //pages/routes
@@ -16,10 +17,12 @@ import Supported from '../../components/Pages/Supported/Supported';
 import Comments from '../../components/Pages/Comments/Comments';
 import ReviewFeedback from '../../components/Pages/ReviewFeedback/ReviewFeedback';
 import Success from '../../components/Pages/Success/Success';
-
+import '../../modules/services/feedback.service'
 
 
 class App extends Component {
+
+  getFeedback
   render() {
     return (
       <div className="App">

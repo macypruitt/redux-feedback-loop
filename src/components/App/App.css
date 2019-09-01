@@ -17,3 +17,11 @@
   font-size: large;
 }
 
+.radio-buttons {
+  padding: 10px;
+}
+
+.question-text {
+  font-size: 2em;
+  padding: 20px;
+}
