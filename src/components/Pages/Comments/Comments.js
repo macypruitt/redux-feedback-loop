@@ -4,8 +4,21 @@ import mapStoreToProps from '../../../modules/mapStoreToProps';
 import Button from '@material-ui/core/Button';
 
 class Comments extends Component {
-    handleClick = (event) => {
-        this.props.history.push('/review');
+    state = {
+        comments: ''
+    }
+
+    handleChange = (event) => {
+        this.setState({
+            comments: event.target.value
+        })
+        console.log(event.target.value)
+    }
+    
+    handleClickSubmit = (event) => {
+        //event.preventDefault();
+        this.props.dispatch({type:'SET_COMMENTS', payload: this.state.supported});
+        this.props.history.push('/comments');
     }
 
     render() {
