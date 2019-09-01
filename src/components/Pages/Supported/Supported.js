@@ -27,7 +27,7 @@ class Supported extends Component {
         return (
             <div>
       
-      <div>
+            <div>
             
             <h2>Did you feel supported by staff?</h2>
             <div className="radio-buttons">
@@ -38,7 +38,7 @@ class Supported extends Component {
                 <input onClick={this.handleChange} type="radio" name="rating" value="5"></input>5
                 <button onClick ={this.handleClickSubmit} type="submit">Submit</button>
             </div>
-        </div>
+            </div>
                
             </div>
         )

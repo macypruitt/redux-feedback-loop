@@ -5,9 +5,6 @@ import { HashRouter as Router, Route } from 'react-router-dom';
 import mapStoreToProps from '../../modules/mapStoreToProps';
 import { connect } from 'react-redux';
 import 'typeface-roboto';
-
-
-
 import './App.css';
 
 //pages/routes
@@ -25,6 +22,7 @@ class App extends Component {
   getFeedback
   render() {
     return (
+      <div className="container">
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Feedback!</h1>
@@ -38,6 +36,7 @@ class App extends Component {
         <Route exact path="/review" component={ReviewFeedback} />
         <Route exact path="/success" component={Success} />
         </Router>
+      </div>
       </div>
     );
   }

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import mapStoreToProps from '../../../modules/mapStoreToProps';
 import Button from '@material-ui/core/Button';
+import '../Comments/Comments.css'
 
 class Comments extends Component {
     state = {
@@ -17,7 +18,7 @@ class Comments extends Component {
     
     handleClickSubmit = (event) => {
         //event.preventDefault();
-        this.props.dispatch({type:'SET_COMMENTS', payload: this.state.supported});
+        this.props.dispatch({type:'SET_COMMENTS', payload: this.state.comments});
         this.props.history.push('/comments');
     }
 
@@ -26,11 +27,10 @@ class Comments extends Component {
     
         return (
             <div>
-      
-            <Button variant="contained" onClick={this.handleClick} >
-            Default
-            </Button>
-               
+                <h3>Please leave any additional comments:</h3>
+                <input  className="comments-box" onChange={this.handleChange} type="text" name="rating"></input>
+                <button onClick ={this.handleClickSubmit} type="submit">Submit</button>
+                    
             </div>
         )
     }

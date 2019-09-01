@@ -3,8 +3,6 @@ import { connect } from 'react-redux';
 import mapStoreToProps from '../../../modules/mapStoreToProps';
 
 
-///rating modules
-
 
 
 class Feeling extends Component {
@@ -31,7 +29,6 @@ class Feeling extends Component {
         
         return (
             <div>
-            
                 <h2>How are you feeling today?</h2>
                 <div className="radio-buttons">
                     <input onClick={this.handleChange} type="radio" name="rating" value="1"></input>1
