@@ -19,7 +19,7 @@ class Comments extends Component {
     handleClickSubmit = (event) => {
         //event.preventDefault();
         this.props.dispatch({type:'SET_COMMENTS', payload: this.state.comments});
-        this.props.history.push('/comments');
+        this.props.history.push('/review');
     }
 
     render() {
