@@ -27,7 +27,7 @@ class Comments extends Component {
     
         return (
             <div>
-                <h3>Please leave any additional comments:</h3>
+                <h3>Any comments you want to leave?</h3>
                 <input  className="comments-box" onChange={this.handleChange} type="text" name="rating"></input>
                 <button onClick ={this.handleClickSubmit} type="submit">Submit</button>
                     

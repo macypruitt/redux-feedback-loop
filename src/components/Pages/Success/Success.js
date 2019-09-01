@@ -5,11 +5,17 @@ import mapStoreToProps from '../../../modules/mapStoreToProps';
 
 class Success extends Component {
 
-    
+    handleButton = () => {
+        this.props.dispatch({type:'CLEAR_FEEDBACK', payload: 'clearDat'});
+        this.props.history.push('/#');
+
+
+    }
     render() {
         return (
             <div>
-                <h1>Success!</h1>
+                <h1>Thank you!</h1>
+                <button onClick={this.handleButton}>Leave New Feedback</button>
             </div>
         )
     }

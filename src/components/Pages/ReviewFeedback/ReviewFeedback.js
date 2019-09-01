@@ -29,7 +29,7 @@ class ReviewFeedback extends Component {
                 <h4>Did you feel supported by staff?</h4>
                 {supportedRating}
 
-                <h4>Please leave any additional comments:</h4>
+                <h4>Any comments you want to leave?</h4>
                 {comments}
                 
                 <button onClick={this.handleClick}>Submit</button>
