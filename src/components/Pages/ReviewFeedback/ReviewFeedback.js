@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import mapStoreToProps from '../../../modules/mapStoreToProps';
+import { postFeedback } from '../../../modules/services/feedback.service';
 
 
 class ReviewFeedback extends Component {
     handleClick = (event) => {
+        postFeedback(this.props.store.allFeedbackReducer);
         this.props.history.push('/success');
     }
 
@@ -30,6 +32,7 @@ class ReviewFeedback extends Component {
                 <h4>Please leave any additional comments:</h4>
                 {comments}
                 
+                <button onClick={this.handleClick}>Submit</button>
 
                
             </div>
