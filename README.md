@@ -1,9 +1,6 @@
+This was an assignment to create a feedback form using single page architecture. The app is built in React, uses Redux for saving state and updated a database using axios.
+
 # Redux Feedback Loop
-
-
->Do not clone this repository. Instead, download the zip, extract the contents, create a new GitHub repository and `git init`, `git add .`, `git commit -m "initial commit - base project"` and add your remote. Please do this before you leave for the day.
-
-**PLEASE COMMENT YOUR CODE.**
 
 "And my last reminder of the day, which is my last reminder of every day, is...?" - Luke
 
