@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import mapStoreToProps from '../../../modules/mapStoreToProps';
 import { postFeedback } from '../../../modules/services/feedback.service';
 
+//This page shows the user their completed feedback form before submitting
 
 class ReviewFeedback extends Component {
     handleClick = (event) => {
@@ -32,7 +33,7 @@ class ReviewFeedback extends Component {
                 <h4>Any comments you want to leave?</h4>
                 {comments}
                 
-                <button onClick={this.handleClick}>Submit</button>
+                <p><button onClick={this.handleClick}>Submit</button> </p>
 
                
             </div>

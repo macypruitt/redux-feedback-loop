@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import mapStoreToProps from '../../../modules/mapStoreToProps';
 
+//This page indicated form successfully submitted and links to reset form
 
 class Success extends Component {
 

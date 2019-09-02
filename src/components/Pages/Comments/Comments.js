@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import mapStoreToProps from '../../../modules/mapStoreToProps';
-import Button from '@material-ui/core/Button';
 import '../Comments/Comments.css'
+
+//This form asks user to leave additional comments
 
 class Comments extends Component {
     state = {
@@ -13,11 +14,9 @@ class Comments extends Component {
         this.setState({
             comments: event.target.value
         })
-        console.log(event.target.value)
     }
     
     handleClickSubmit = (event) => {
-        //event.preventDefault();
         this.props.dispatch({type:'SET_COMMENTS', payload: this.state.comments});
         this.props.history.push('/review');
     }
@@ -29,8 +28,7 @@ class Comments extends Component {
             <div>
                 <h3>Any comments you want to leave?</h3>
                 <input  className="comments-box" onChange={this.handleChange} type="text" name="rating"></input>
-                <button onClick ={this.handleClickSubmit} type="submit">Submit</button>
-                    
+                <button onClick ={this.handleClickSubmit} type="submit">Submit</button> 
             </div>
         )
     }
