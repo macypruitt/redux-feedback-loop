@@ -13,16 +13,17 @@ class Understanding extends Component {
     handleChange = (event) => {
         this.setState({
             understanding: event.target.value
+        }, () => {
+                if(this.state.understanding) {
+                this.setState({
+                    disabled:false
+                })
+            } else {
+                this.setState({
+                    disabled: true
+                })
+            }
         });
-        if(this.state.understanding) {
-            this.setState({
-                disabled:false
-            })
-        } else {
-            this.setState({
-                disabled: true
-            })
-        }
     }
     
     handleClickSubmit = (event) => {

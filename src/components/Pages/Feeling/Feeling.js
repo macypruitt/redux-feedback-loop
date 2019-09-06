@@ -13,16 +13,17 @@ class Feeling extends Component {
     handleChange = (event) => {
         this.setState({
             feeling: event.target.value
+        }, () => {
+                if(this.state.feeling) {
+                this.setState({
+                    disabled:false
+                })
+            } else {
+                this.setState({
+                    disabled: true
+                })
+            }
         });
-        if(this.state.feeling) {
-            this.setState({
-                disabled:false
-            })
-        } else {
-            this.setState({
-                disabled: true
-            })
-        }
     }
     
     handleClickSubmit = (event) => {

@@ -13,16 +13,17 @@ class Supported extends Component {
     handleChange = (event) => {
         this.setState({
             supported: event.target.value
-        })
-        if(this.state.supported) {
-            this.setState({
-                disabled:false
-            })
-        } else {
-            this.setState({
-                disabled: true
-            })
-        }
+        }, () => {
+                if(this.state.supported) {
+                this.setState({
+                    disabled:false
+                })
+            } else {
+                this.setState({
+                    disabled: true
+                })
+            }
+        });
     }
     
     handleClickSubmit = (event) => {
